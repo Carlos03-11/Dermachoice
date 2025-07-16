@@ -1,2 +1,0 @@
-# Dermachoice
-Farmacia dermatologica

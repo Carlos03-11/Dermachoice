@@ -1,0 +1,272 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dermachoice</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #5C3D58; /* azul farmacia */
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      user-select: <img src= "logo.png">
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffc107; /* amarillo */
+    }
+
+    .hero {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: rgb(254, 254, 254);
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+.hero img.active {
+  opacity: 1;
+}
+.hero-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section.productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap: 1.5rem;
+    }
+
+    .producto {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .producto img {
+      max-width: 150px;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .producto h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .producto p {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .producto button {
+      margin-top: 1rem;
+      background: #D8A6A1;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .producto button:hover {
+      background: #5C3D58;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #5C3D58;
+      color: white;
+      margin-top: 3rem;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+
+      .hero {
+        font-size: 1.3rem;
+        height: 200px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <img class="active"src="D:\Dermachoice\logo\logo.png" width="100" height="100"alt="logo">
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a herf="#spa">SPA</a></li>
+    </ul>
+  </nav>
+</header>
+<section class="hero" id="inicio">
+  <img class="active" src="https://tahecosmetics.com/trends/wp-content/uploads/2021/06/cuidar-piel-cara.jpg" alt="Slide 1">
+  <img src="https://tahecosmetics.com/trends/wp-content/uploads/2021/06/hidratar-piel-cara.jpg" alt="Slide 2">
+  <img src="https://us.images.westend61.de/0001896685pw/hermosa-mujer-realizando-tratamientos-de-belleza-para-la-piel-y-el-rostro-toma-de-estudio-con-enfoque-en-conceptos-de-cosmetica-y-cuidado-de-la-piel-DMDF06571.jpg" alt="Slide 3">
+  <div class="hero-text">Tu Salud, Nuestra Prioridad</div>
+</section>
+
+<main>
+  <section class="productos" id="productos">
+    <article class="producto">
+      <img src="https://th.bing.com/th/id/OIP.bhTYVB5BOhQb_Xg2xnx0UgHaHa?w=219&h=219&c=7&r=0&o=7&dpr=2.5&pid=1.7&rm=3" alt="Protector solar" />
+      <h3>Protector solar</h3>
+      <p>Protector Solar Eucerin Gel-Crema.</p>
+      <button>Mas Productos</button>
+    </article>
+
+    <article class="producto">
+      <img src="https://i5-mx.walmartimages.com/gr/images/product-images/img_large/00842942022298L.jpg" alt="cremas humectantes" />
+      <h3>Crema Humectante</h3>
+      <p>Crema facial Isdin humectante con ácido hialurónico 50 ml.</p>
+      <button>Mas Productos</button>
+    </article>
+
+    <article class="producto">
+      <img src="https://th.bing.com/th/id/OIP.zkmJkBSsr333jnsmcfAzOwHaHa?w=196&h=196&c=7&r=0&o=7&dpr=2.5&pid=1.7&rm=3" alt="tratamientos para acne " />
+      <h3>Crema par el acne</h3>
+      <p>Effaclar Multi-Target Acne Treatment with Salicylic Acid.</p>
+      <button>Mas Productos</button>
+    </article>
+    <article class="producto">
+      <img src="https://udocz-images.b-cdn.net/documents_html/289756-95612df3dddf92d2cc2dd8dd13daa140/bg5.jpg?width=2688" alt="Productos con receta " />
+      <h3>Productos con receta</h3>
+      <p>Effaclar Multi-Target Acne Treatment with Salicylic Acid.</p>
+      <button>Mas Productos</button>
+    </article>
+  </section>
+  <center>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.807408090677!2d-97.5070324889325!3d25.875815377185617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f95227f34245b%3A0xf8247a03cf719a62!2sDerma%20Choice%20Farmacia%20Dermatol%C3%B3gica!5e0!3m2!1ses-419!2smx!4v1752268390359!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</center>
+  <section id="contacto" style="margin-top: 3rem;">
+    <h2>Contacto</h2>
+    <form action="https://formsubmit.co/chgt0311@gmail.com" method="POST" style="max-width: 400px; margin-top: 1rem;">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Nuevo mensaje de Dermachoice">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_autoresponse" value="Gracias por contactarnos. Te responderemos pronto.">
+
+  <label for="nombre">Nombre:</label><br />
+  <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 8px; margin-bottom: 1rem;" />
+
+  <label for="email">Correo electrónico:</label><br />
+  <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 1rem;" />
+
+  <label for="mensaje">Mensaje:</label><br />
+  <textarea id="mensaje" name="mensaje" rows="4" required style="width: 100%; padding: 8px; margin-bottom: 1rem;"></textarea>
+
+  <button type="submit" style="background:#5C3D58; color:white; border:none; padding: 10px 15px; cursor:pointer;">Enviar</button>
+</form>
+
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Dermachoice. Todos los derechos reservados.
+</footer>
+<script>
+  const slides = document.querySelectorAll('.hero img');
+  let index = 0;
+
+  function showNextSlide() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 4000); // cambia cada 4 segundos
+</script>
+
+
+</body>
+</html>
